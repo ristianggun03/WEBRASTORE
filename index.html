@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>KhimarGirls - Syar'i Hijab for Teens | Remain Aesthetic</title>
+    <style>
+      /* Reset & Base - Soft, modern, dan berwarna cerah seperti referensi Dribbble */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Poppins",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          sans-serif;
+        background-color: #fffbf5;
+        color: #2d2a24;
+        line-height: 1.4;
+        scroll-behavior: smooth;
+      }
+
+      /* Import Google Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+      /* Container umum */
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ========== NAVBAR ========== */
+      .navbar {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        background-color: #fffbf5;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        background: linear-gradient(135deg, #c2596b, #e38b6d);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .logo span {
+        font-weight: 500;
+        color: #b45f4b;
+        background: none;
+        -webkit-background-clip: unset;
+        background-clip: unset;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+      }
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: #3a2e2a;
+        transition: color 0.2s;
+        font-size: 1rem;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: #c2596b;
+      }
+      .btn-outline {
+        border: 1.5px solid #c2596b;
+        background: transparent;
+        padding: 8px 20px;
+        border-radius: 40px;
+        font-weight: 600;
+        color: #c2596b;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+      .btn-outline:hover {
+        background: #c2596b;
+        color: white;
+      }
+
+      /* ========== HERO SECTION ========== */
+      .hero {
+        padding: 60px 0 80px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+      }
+
+      .hero-content h4 {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #c2596b;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+      .hero-content h1 {
+        font-size: 3.3rem;
+        line-height: 1.2;
+        font-weight: 800;
+        color: #2d2a24;
+        margin-bottom: 20px;
+      }
+      .hero-content h1 .highlight {
+        background: linear-gradient(120deg, #f9c9b6, #ffdfb8);
+        padding: 0 8px;
+        display: inline-block;
+      }
+      .slogan-arabic {
+        font-size: 1.4rem;
+        font-weight: 600;
+        font-style: italic;
+        border-left: 5px solid #e38b6d;
+        padding-left: 20px;
+        margin: 20px 0;
+        color: #5e4b42;
+      }
+      .slogan-main {
+        font-size: 1.4rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #b24f5f, #de7c5a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 20px;
+      }
+      .desc {
+        font-size: 1rem;
+        color: #5f554c;
+        margin-bottom: 32px;
+        max-width: 90%;
+        line-height: 1.5;
+      }
+      .cta-buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        background: #c2596b;
+        border: none;
+        padding: 12px 32px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        color: white;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          background 0.2s;
+        box-shadow: 0 8px 20px rgba(194, 89, 107, 0.2);
+      }
+      .btn-primary:hover {
+        background: #a74556;
+        transform: translateY(-3px);
+      }
+      .btn-secondary {
+        background: transparent;
+        border: 1.5px solid #cfa392;
+        padding: 12px 32px;
+        border-radius: 50px;
+        font-weight: 600;
+        color: #9b6b5c;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .btn-secondary:hover {
+        border-color: #c2596b;
+        color: #c2596b;
+        background: #fff6f0;
+      }
+
+      .hero-image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .image-frame {
+        background: linear-gradient(145deg, #ffdcd0, #ffe9de);
+        border-radius: 48% 52% 38% 62% / 56% 46% 54% 44%;
+        padding: 28px 20px 20px 28px;
+        box-shadow: 20px 25px 45px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s;
+      }
+      .hero-img-main {
+        max-width: 100%;
+        width: 380px;
+        border-radius: 32px;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+      .hero-img-main:hover {
+        transform: scale(1.02);
+      }
+      .bg-shape {
+        position: absolute;
+        z-index: -1;
+        width: 280px;
+        height: 280px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 208, 180, 0.4) 0%,
+          rgba(255, 235, 215, 0) 80%
+        );
+        border-radius: 50%;
+        top: -20px;
+        right: -30px;
+      }
+      .bg-shape2 {
+        bottom: 10px;
+        left: -40px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, #fbd7cb, transparent);
+        position: absolute;
+        border-radius: 60% 40% 50% 50%;
+        z-index: -1;
+      }
+
+      /* ========== COLLECTION SECTION ========== */
+      .featured {
+        padding: 60px 0 80px;
+        background-color: #fef9f4;
+      }
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #2d2a24;
+      }
+      .section-sub {
+        text-align: center;
+        color: #a47a6b;
+        margin-bottom: 48px;
+        font-weight: 500;
+      }
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 32px;
+      }
+      .product-card {
+        background: white;
+        border-radius: 32px;
+        padding: 20px 16px 24px;
+        text-align: center;
+        transition: all 0.25s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+        border: 1px solid #ffede3;
+      }
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 30px -12px rgba(194, 89, 107, 0.15);
+        border-color: #ffe1d2;
+      }
+      .product-img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 40px;
+        margin-bottom: 16px;
+        background: #f5e8e0;
+        padding: 8px;
+      }
+      .product-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin: 12px 0 6px;
+      }
+      .price {
+        font-weight: 700;
+        color: #c2596b;
+        font-size: 1.1rem;
+      }
+      .rating {
+        color: #ffb347;
+        font-size: 0.8rem;
+        margin: 8px 0;
+      }
+      .shop-link {
+        display: inline-block;
+        margin-top: 12px;
+        font-weight: 500;
+        color: #c2596b;
+        text-decoration: none;
+      }
+
+      /* ========== ABOUT SECTION ========== */
+      .about {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #fff8f3 0%, #fff 100%);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+      .about-content h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        color: #2d2a24;
+      }
+      .about-content p {
+        color: #5f554c;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .about-stats {
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+      }
+      .stat {
+        text-align: center;
+      }
+      .stat-number {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #c2596b;
+      }
+      .stat-label {
+        font-size: 0.85rem;
+        color: #a47a6b;
+      }
+      .about-img {
+        background: linear-gradient(145deg, #ffdcd0, #ffe9de);
+        border-radius: 40px;
+        padding: 20px;
+        text-align: center;
+      }
+      .about-img img {
+        max-width: 100%;
+        border-radius: 30px;
+      }
+
+      /* ========== CONTACT SECTION ========== */
+      .contact {
+        padding: 80px 0;
+        background-color: #fffbf5;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+      }
+      .contact-info h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #2d2a24;
+      }
+      .contact-details {
+        margin: 30px 0;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        color: #5f554c;
+      }
+      .contact-icon {
+        width: 45px;
+        height: 45px;
+        background: #fef0e9;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+      }
+      .contact-form {
+        background: white;
+        padding: 40px;
+        border-radius: 30px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 14px 18px;
+        border: 1px solid #ffe0d4;
+        border-radius: 20px;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: all 0.2s;
+      }
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #c2596b;
+        box-shadow: 0 0 0 3px rgba(194, 89, 107, 0.1);
+      }
+      .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+      .submit-btn {
+        background: #c2596b;
+        color: white;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 40px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .submit-btn:hover {
+        background: #a74556;
+        transform: translateY(-2px);
+      }
+
+      /* ========== TESTIMONIAL ========== */
+      .testimonial {
+        background: linear-gradient(110deg, #fff3ec, #ffffff);
+        padding: 50px 0;
+        text-align: center;
+      }
+      .testi-quote {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.25rem;
+        font-style: italic;
+        color: #4b3d35;
+        background: white;
+        border-radius: 80px;
+        padding: 24px 32px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.02);
+      }
+
+      /* ========== FOOTER ========== */
+      .footer {
+        background-color: #2d2a24;
+        color: #e5d9d1;
+        padding: 40px 0 24px;
+        text-align: center;
+      }
+      .footer a {
+        color: #f8cebd;
+        text-decoration: none;
+      }
+
+      /* ========== RESPONSIVE ========== */
+      @media (max-width: 900px) {
+        .hero-grid,
+        .about-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+          text-align: center;
+        }
+        .hero-content .desc {
+          max-width: 100%;
+        }
+        .cta-buttons {
+          justify-content: center;
+        }
+        .slogan-arabic {
+          text-align: left;
+        }
+        .navbar {
+          flex-direction: column;
+        }
+        .nav-links {
+          gap: 20px;
+        }
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+        .about-stats {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .container {
+          padding: 0 20px;
+        }
+        .btn-primary,
+        .btn-secondary {
+          padding: 10px 20px;
+        }
+        .contact-form {
+          padding: 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">Khimar<span>Girls</span></div>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Beranda</a></li>
+          <li><a href="#collection">Koleksi</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <button class="btn-outline">Masuk/Daftar</button>
+      </div>
+    </div>
+
+    <!-- HOME Section -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h4>✨ NEW SEASON ✨</h4>
+          <h1>Khimar <span class="highlight">Syar'i</span> untuk Remaja</h1>
+          <div class="slogan-main">
+            “remain aesthetic while adhering to Islamic law”
+          </div>
+          <div class="slogan-arabic">🕊️ وَقُل رَّبِّ زِدْنِي عِلْمًا 🕊️</div>
+          <p class="desc">
+            KhimarGirls menghadirkan kerudung syar'i modern yang nyaman, ringan,
+            dan tetap fashionable. Tampil anggun setiap hari tanpa meninggalkan
+            kewajiban menutup aurat. Temukan koleksi warna earth tone & pastel
+            exclusive.
+          </p>
+          <div class="cta-buttons">
+            <button
+              class="btn-primary"
+              onclick="
+                document
+                  .getElementById('collection')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              Jelajahi Koleksi →
+            </button>
+            <button
+              class="btn-secondary"
+              onclick="
+                document
+                  .getElementById('contact')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              Hubungi Kami
+            </button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-frame">
+            <img
+              class="hero-img-main"
+              src="https://i1-c.pinimg.com/736x/ef/52/ec/ef52ec6f56d93afadf33ba3860fee6e0.jpg"
+              alt="Model khimar syar'i aesthetic"
+              style="background: #ffe1d2; object-fit: cover"
+            />
+          </div>
+          <div class="bg-shape"></div>
+          <div class="bg-shape2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLECTION Section -->
+    <section id="collection" class="featured">
+      <div class="container">
+        <h2 class="section-title">🌿 Koleksi Favorit KhimarGirls</h2>
+        <div class="section-sub">
+          Syar'i praktis, bahan adem, tampilan aesthetic
+        </div>
+        <div class="product-grid">
+          <div class="product-card">
+            <img
+              class="product-img"
+              src="https://i1-c.pinimg.com/736x/c0/ae/9d/c0ae9d706763140559761da9b71fc638.jpg"
+              alt="Khimar Beige"
+            />
+            <div class="product-title">Khimar Basic Ceramic</div>
+            <div class="rating">★★★★★ 4.9</div>
+            <div class="price">Rp 129.000</div>
+            <a href="#" class="shop-link">Lihat Detail →</a>
+          </div>
+          <div class="product-card">
+            <img
+              class="product-img"
+              src="https://i1-c.pinimg.com/474x/bc/5a/c3/bc5ac3e9ea00c0f26b41e041e237b927.jpg"
+              alt="Khimar Dusty Rose"
+            />
+            <div class="product-title">Dusty Rose Pleats</div>
+            <div class="rating">★★★★★ 5.0</div>
+            <div class="price">Rp 149.000</div>
+            <a href="#" class="shop-link">Lihat Detail →</a>
+          </div>
+          <div class="product-card">
+            <img
+              class="product-img"
+              src="https://i1-c.pinimg.com/474x/29/fc/fd/29fcfd9abf4994583ee70a9ae8c34c37.jpg"
+              alt="Khimar Mocca"
+            />
+            <div class="product-title">french khimar eifel tower</div>
+            <div class="rating">★★★★☆ 4.8</div>
+            <div class="price">Rp 139.000</div>
+            <a href="#" class="shop-link">Lihat Detail →</a>
+          </div>
+          <div class="product-card">
+            <img
+              class="product-img"
+              src="https://i1-c.pinimg.com/474x/13/db/8e/13db8e79c8909cf02573554f66ad5cc8.jpg"
+              alt="Khimar Peach"
+            />
+            <div class="product-title">Peauty Peach Linen</div>
+            <div class="rating">★★★★★ 4.9</div>
+            <div class="price">Rp 159.000</div>
+            <a href="#" class="shop-link">Lihat Detail →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT Section -->
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div class="about-content">
+          <h2>Tentang KhimarGirls</h2>
+          <p>
+            KhimarGirls lahir dari semangat untuk memberikan solusi hijab syar'i
+            yang tidak hanya memenuhi syariat, tetapi juga mendukung gaya hidup
+            remaja masa kini yang aesthetic dan percaya diri.
+          </p>
+          <p>
+            Setiap produk kami dirancang dengan bahan premium yang adem, mudah
+            diatur, dan tersedia dalam berbagai warna kekinian. Kami percaya
+            bahwa menutup aurat bukanlah penghalang untuk tetap tampil modis dan
+            berkelas.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-number">5000+</div>
+              <div class="stat-label">Pelanggan Puas</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Koleksi Exclusive</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">4.9</div>
+              <div class="stat-label">Rating Rata-rata</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-img">
+          <img
+            src="https://i1-c.pinimg.com/1200x/18/a0/95/18a0950baedd0d5e6a0a67627392bada.jpg"
+            alt="About KhimarGirls"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT Section -->
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Hubungi Kami</h2>
+          <p>
+            Punya pertanyaan tentang produk, pesanan, atau kerjasama? Tim kami
+            siap membantu Anda.
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>Bogor, Indonesia</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>hello@khimargirls.com</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>+6283163810324</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">⏰</div>
+              <div>Senin - Jumat, 09:00 - 17:00 WIB</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3 style="margin-bottom: 20px; color: #2d2a24">Kirim Pesan</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" placeholder="Nama Lengkap" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Pesan Anda..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Kirim Pesan →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial">
+      <div class="container">
+        <div class="testi-quote">
+          💬 “KhimarGirls bikin aku makin percaya diri tampil syar'i tanpa
+          kehilangan gaya. Bahannya lembut, nggak gerah, dan desainnya kekinian.
+          Remain aesthetic, tetap taat!” — moedsa, 19 tahun
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p style="font-weight: 600; letter-spacing: 1px">
+          KhimarGirls — Remain Aesthetic While Adhering to Islamic Law
+        </p>
+        <p style="margin: 12px 0; font-size: 0.85rem">
+          © 2025 KhimarGirls • Syar'i Remaja Indonesia • Modern & Berkelas
+        </p>
+        <p>
+          <a href="#">Instagram</a> • <a href="#">TikTok</a> •
+          <a href="#">Shoppe</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links + active state
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
+            // Update active class
+            document
+              .querySelectorAll(".nav-links a")
+              .forEach((a) => a.classList.remove("active"));
+            this.classList.add("active");
+          }
+        });
+      });
+
+      // Form submission alert (demo)
+      document
+        .getElementById("contactForm")
+        ?.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert(
+            "Terima kasih! Pesan Anda telah terkirim. Tim kami akan segera merespon.",
+          );
+          this.reset();
+        });
+
+      // Highlight active menu on scroll
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section[id]");
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.clientHeight;
+          if (
+            pageYOffset >= sectionTop &&
+            pageYOffset < sectionTop + sectionHeight
+          ) {
+            current = section.getAttribute("id");
+          }
+        });
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
